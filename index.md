@@ -3,8 +3,4 @@
 
 <iframe src="whatsnew.html" width="600" height="150">(iframe)</iframe>
 
-[備忘録](./note.html)
-
-
-
-aaa
+[備忘録](./note/note.html)
