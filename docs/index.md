@@ -1,6 +1,9 @@
 ---
 layout: post
-title: Blogging Like a Hacker
+title: "ああああ"
+date: 2013-10-09 00:21
+comments: true
+categories: [Android, Java, Geo, GoogleMapsAPI]
 ---
 # とりむのページ
 超簡易(マークダウンをhtmlに変換してるだけ)な状態なので今後いろいろやるかも
