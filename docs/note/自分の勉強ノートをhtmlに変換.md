@@ -33,5 +33,6 @@ $$
 
 
 
-最後に、Typoraのデフォルトのテーマ(Github)が好きなのでTyporaのテーマのCSSをぶっこ抜いてくる。(Typoraをアンインストールしたときとかで使えなくなると困るので)好きなテーマのCSSを適当な場所にコピーして、そのCSSファイルをMarkdown PDFのオプション`Markdown-pdf:Styles`に登録。
+~~最後に、Typoraのデフォルトのテーマ(Github)が好きなのでTyporaのテーマのCSSをぶっこ抜いてくる。(Typoraをアンインストールしたときとかで使えなくなると困るので)好きなテーマのCSSを適当な場所にコピーして、そのCSSファイルをMarkdown PDFのオプション`Markdown-pdf:Styles`に登録。~~
+これをやってしまうとhtmlをローカル環境で見た場合にしか、CSSが適用されない。webページとして公開する場合はCSSを読み込めるように工夫する必要がある。
 
