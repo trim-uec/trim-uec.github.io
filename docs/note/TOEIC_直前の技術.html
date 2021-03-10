@@ -1,460 +1,531 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-
 <head>
-    <title>TOEIC_直前の技術.md</title>
-    <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-    
-<style>
-/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>TOEIC_直前の技術</title><link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 40px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px !important; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  html.blink-to-pdf { font-size: 13px; }
+  .typora-export #write { padding-left: 32px; padding-right: 32px; padding-bottom: 0px; break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none 0s ease 0s; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+svg[id^="mermaidChart"] { line-height: 1em; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+html {
+    font-size: 16px;
+}
 
 body {
-	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
-	font-size: var(--vscode-markdown-font-size, 14px);
-	padding: 0 26px;
-	line-height: var(--vscode-markdown-line-height, 22px);
-	word-wrap: break-word;
+    font-family: "Open Sans","Clear Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
 }
 
-#code-csp-warning {
-	position: fixed;
-	top: 0;
-	right: 0;
-	color: white;
-	margin: 16px;
-	text-align: center;
-	font-size: 12px;
-	font-family: sans-serif;
-	background-color:#444444;
-	cursor: pointer;
-	padding: 6px;
-	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
 }
 
-#code-csp-warning:hover {
-	text-decoration: none;
-	background-color:#007acc;
-	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
 }
 
-body.scrollBeyondLastLine {
-	margin-bottom: calc(100vh - 22px);
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
 }
 
-body.showEditorSelection .code-line {
-	position: relative;
-}
-
-body.showEditorSelection .code-active-line:before,
-body.showEditorSelection .code-line:hover:before {
-	content: "";
-	display: block;
-	position: absolute;
-	top: 0;
-	left: -12px;
-	height: 100%;
-}
-
-body.showEditorSelection li.code-active-line:before,
-body.showEditorSelection li.code-line:hover:before {
-	left: -30px;
-}
-
-.vscode-light.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.15);
-}
-
-.vscode-light.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.40);
-}
-
-.vscode-light.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-dark.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.4);
-}
-
-.vscode-dark.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.60);
-}
-
-.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-high-contrast.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 160, 0, 0.7);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 160, 0, 1);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-img {
-	max-width: 100%;
-	max-height: 100%;
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
 }
 
 a {
-	text-decoration: none;
+    color: #4183C4;
 }
-
-a:hover {
-	text-decoration: underline;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
 }
-
-a:focus,
-input:focus,
-select:focus,
-textarea:focus {
-	outline: 1px solid -webkit-focus-ring-color;
-	outline-offset: -1px;
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
 }
-
-hr {
-	border: 0;
-	height: 2px;
-	border-bottom: 2px solid;
+h1 tt,
+h1 code {
+    font-size: inherit;
 }
-
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
 h1 {
-	padding-bottom: 0.3em;
-	line-height: 1.2;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
+    padding-bottom: .3em;
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+   padding-bottom: .3em;
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
 }
 
-h1, h2, h3 {
-	font-weight: normal;
+li p.first {
+    display: inline-block;
 }
-
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #dfe2e5;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
 table {
-	border-collapse: collapse;
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border-top: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table tr th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table tr td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table tr th:first-child,
+table tr td:first-child {
+    margin-top: 0;
+}
+table tr th:last-child,
+table tr td:last-child {
+    margin-bottom: 0;
 }
 
-table > thead > tr > th {
-	text-align: left;
-	border-bottom: 1px solid;
+.CodeMirror-lines {
+    padding-left: 4px;
 }
 
-table > thead > tr > th,
-table > thead > tr > td,
-table > tbody > tr > th,
-table > tbody > tr > td {
-	padding: 5px 10px;
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
 }
 
-table > tbody > tr + tr > td {
-	border-top: 1px solid;
-}
-
-blockquote {
-	margin: 0 7px 0 5px;
-	padding: 0 16px 0 10px;
-	border-left-width: 5px;
-	border-left-style: solid;
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
 }
 
 code {
-	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
-	font-size: 1em;
-	line-height: 1.357em;
+    background-color: #f3f4f4;
+    padding: 0 2px 0 2px;
 }
 
-body.wordWrap pre {
-	white-space: pre-wrap;
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
 }
 
-pre:not(.hljs),
-pre.hljs code > div {
-	padding: 16px;
-	border-radius: 3px;
-	overflow: auto;
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
 }
 
-pre code {
-	color: var(--vscode-editor-foreground);
-	tab-size: 4;
+@media print {
+    html {
+        font-size: 13px;
+    }
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+    pre {
+        word-wrap: break-word;
+    }
 }
 
-/** Theming */
-
-.vscode-light pre {
-	background-color: rgba(220, 220, 220, 0.4);
-}
-
-.vscode-dark pre {
-	background-color: rgba(10, 10, 10, 0.4);
-}
-
-.vscode-high-contrast pre {
-	background-color: rgb(0, 0, 0);
-}
-
-.vscode-high-contrast h1 {
-	border-color: rgb(0, 0, 0);
-}
-
-.vscode-light table > thead > tr > th {
-	border-color: rgba(0, 0, 0, 0.69);
-}
-
-.vscode-dark table > thead > tr > th {
-	border-color: rgba(255, 255, 255, 0.69);
-}
-
-.vscode-light h1,
-.vscode-light hr,
-.vscode-light table > tbody > tr + tr > td {
-	border-color: rgba(0, 0, 0, 0.18);
-}
-
-.vscode-dark h1,
-.vscode-dark hr,
-.vscode-dark table > tbody > tr + tr > td {
-	border-color: rgba(255, 255, 255, 0.18);
-}
-
-</style>
-
-<style>
-/* Tomorrow Theme */
-/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
-/* Original theme - https://github.com/chriskempson/tomorrow-theme */
-
-/* Tomorrow Comment */
-.hljs-comment,
-.hljs-quote {
-	color: #8e908c;
-}
-
-/* Tomorrow Red */
-.hljs-variable,
-.hljs-template-variable,
-.hljs-tag,
-.hljs-name,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-regexp,
-.hljs-deletion {
-	color: #c82829;
-}
-
-/* Tomorrow Orange */
-.hljs-number,
-.hljs-built_in,
-.hljs-builtin-name,
-.hljs-literal,
-.hljs-type,
-.hljs-params,
-.hljs-meta,
-.hljs-link {
-	color: #f5871f;
-}
-
-/* Tomorrow Yellow */
-.hljs-attribute {
-	color: #eab700;
-}
-
-/* Tomorrow Green */
-.hljs-string,
-.hljs-symbol,
-.hljs-bullet,
-.hljs-addition {
-	color: #718c00;
-}
-
-/* Tomorrow Blue */
-.hljs-title,
-.hljs-section {
-	color: #4271ae;
-}
-
-/* Tomorrow Purple */
-.hljs-keyword,
-.hljs-selector-tag {
-	color: #8959a8;
-}
-
-.hljs {
-	display: block;
-	overflow-x: auto;
-	color: #4d4d4c;
-	padding: 0.5em;
-}
-
-.hljs-emphasis {
-	font-style: italic;
-}
-
-.hljs-strong {
-	font-weight: bold;
-}
-</style>
-
-<style>
-/*
- * Markdown PDF CSS
- */
-
- body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
-	padding: 0 12px;
-}
-
-pre {
+.md-fences {
 	background-color: #f8f8f8;
-	border: 1px solid #cccccc;
-	border-radius: 3px;
-	overflow-x: auto;
-	white-space: pre-wrap;
-	overflow-wrap: break-word;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
 }
 
-pre:not(.hljs) {
-	padding: 23px;
-	line-height: 19px;
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
 }
 
-blockquote {
-	background: rgba(127, 127, 127, 0.1);
-	border-color: rgba(0, 122, 204, 0.5);
+.md-mathjax-midline {
+    background: #fafafa;
 }
 
-.emoji {
-	height: 1.4em;
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
 }
 
-code {
-	font-size: 14px;
-	line-height: 19px;
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
 }
 
-/* for inline code */
-:not(pre):not(.hljs) > code {
-	color: #C9AE75; /* Change the old color so it seems less like an error */
-	font-size: inherit;
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
 }
 
-/* Page Break : use <div class="page"/> to insert page break
--------------------------------------------------------- */
-.page {
-	page-break-after: always;
+.sidebar-tabs {
+    border-bottom: none;
 }
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+.html-for-mac .context-menu {
+    --item-hover-bg-color: #E6F0FE;
+}
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
 
 </style>
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css"
-        integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js"
-        integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx"
-        crossorigin="anonymous"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js"
-        integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe"
-        crossorigin="anonymous"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            renderMathInElement(document.body, {
-                delimiters: [
-                    { left: "$$", right: "$$", display: true },
-                    { left: "$", right: "$", display: false },
-                ]
-            });
-        });
-    </script>
 </head>
-
-<body>
-    <h1 id="toeic-lr%E3%83%86%E3%82%B9%E3%83%88-%E7%9B%B4%E5%89%8D%E3%81%AE%E6%8A%80%E8%A1%93">TOEIC LRテスト 直前の技術</h1>
-<h2 id="day-1">Day 1</h2>
-<ul>
-<li>accounting 経理、会計（計算）</li>
-<li>account 口座</li>
-<li>Let's take a look at next quarter's <strong>sales projections</strong>. 売上の予測</li>
-<li>selling 航海 selling 販売</li>
-<li>i've got figures(I have figures) 数字があります(売上とか)</li>
-<li>Shall I ask ~~ ?<br>
-&gt; Good idea.
-<ul>
-<li>提案・依頼・命令には決まり文句か、拒む理由で返される</li>
-<li>e.g.) Could I ask you to ~~ ?<br>
-&gt; I'd be happy to.</li>
-</ul>
-</li>
-<li>caterer 食事の仕出し屋、ケータリングサービス</li>
-<li>overseas posting 海外赴任/派遣</li>
-</ul>
-<h3 id="%E7%B4%A0%E7%9B%B4%E3%81%A7%E3%81%AA%E3%81%84%E5%95%8F%E9%A1%8C">素直でない問題</h3>
-<ul>
-<li>明確に答えられない/わからない場合</li>
-</ul>
-<p>When will your ~~ begin?<br>
-&gt; I haven't heard yet.</p>
-<p>あなた(you)に聞かれているので、<strong>I</strong> haven't heardはふさわしい応答</p>
-<p>Are you going to accept the job offer or do you plan to remain with your current firm?<br>
-&gt; I haven't decided yet.</p>
-<h4 id="%E8%B3%AA%E5%95%8F%E3%81%AE%E6%AD%A3%E7%A2%BA%E3%81%AA%E5%BF%9C%E7%AD%94%E3%81%AB%E3%81%AA%E3%82%89%E3%81%AA%E3%81%84%E3%82%B1%E3%83%BC%E3%82%B9">質問の正確な応答にならないケース</h4>
-<ul>
-<li>会話スキップ</li>
-</ul>
-<p>Can I reschedule my appointment?<br>
-&gt; (Sure.) When would be good for you?</p>
-<p>sureを省略。応答が抜けて会話がスピーディーに進む</p>
-<ul>
-<li>質問の前提をさらに聞き返す</li>
-</ul>
-<p>How far is it from here to the station?<br>
-&gt; Are you thinking about walking? 歩くつもりですか？</p>
-<ul>
-<li>質問の前提が覆る実情がある場合</li>
-</ul>
-<p>What time will you pick up ~~ from the airport?<br>
-&gt; Actually, ~~(違う誰か) will go to meet him.</p>
-<h2 id="day-2">Day 2</h2>
-<ul>
-<li>I can type the document for you.<br>
-&gt; Great. That**'d help me out**. 素晴らしい！助かります。</li>
-<li>sales meeting 営業会議</li>
-<li>invoice 請求書</li>
-<li><strong>First thing in</strong> the morning 朝一番に
-<ul>
-<li>first thing in the afternoonとかも言うらしい（午後一に）</li>
-</ul>
-</li>
-<li>give ~ a call ～に電話する</li>
-<li>remain with your current firm 今の会社に残る</li>
-<li>accept the job offer 採用の申し出を受ける</li>
-<li>sign up for the training 研修に参加登録をする</li>
-</ul>
-<p><strong>質問の主語を聞き逃さない</strong></p>
-<h3 id="review">review</h3>
-<ul>
-<li>patio 中庭
-<ul>
-<li>would you like a table on the patio or indoors? 中庭の席が良いですか？室内にしますか？</li>
-</ul>
-</li>
-<li>polish <strong>plant</strong> ポーランドの<strong>工場</strong></li>
-<li><strong>Are you</strong> mak<strong>ing</strong> a presentation at the conference? 会議でプレゼンされるんですか？</li>
-<li>A hevier load than usual いつもより重い荷物</li>
-<li>one-time charge 1回の請求(課金) = 1回払い</li>
-<li><strong>apply to (体の部位)</strong> → ～に塗る、つける   <s><strong>書類とかの話ではない</strong></s></li>
-<li><strong>turn in</strong> my guest badge when I go out 提出する、渡す</li>
-<li>I just <strong>haven't had a chance to</strong> ~ ～する機会が無かった→<strong>まだ～できていない</strong></li>
-<li>I can't seem to ~ ～できないみたいなんですが</li>
-</ul>
-
+<body class='typora-export os-windows' >
+<div  id='write'  class = 'is-node'><h1><a name="toeic-lrテスト-直前の技術" class="md-header-anchor"></a><span>TOEIC LRテスト 直前の技術</span></h1><h2><a name="day-1" class="md-header-anchor"></a><span>Day 1</span></h2><ul><li><p><span>accounting 経理、会計（計算）</span></p></li><li><p><span>account 口座</span></p></li><li><p><span>Let&#39;s take a look at next quarter&#39;s </span><strong><span>sales projections</span></strong><span>. 売上の予測</span></p></li><li><p><span>selling 航海 selling 販売</span></p></li><li><p><span>i&#39;ve got figures(I have figures) 数字があります(売上とか)</span></p></li><li><p><span>Shall I ask </span><span>~</span><span>~</span><span> ? </span>
+<span>&gt;</span><span> Good idea.</span></p><ul><li><span>提案・依頼・命令には決まり文句か、拒む理由で返される</span></li><li><span>e.g.) Could I ask you to </span><span>~</span><span>~</span><span> ? </span>
+<span>&gt;</span><span> I&#39;d be happy to.</span></li></ul></li><li><p><span>caterer 食事の仕出し屋、ケータリングサービス</span></p></li><li><p><span>overseas posting 海外赴任/派遣</span></p></li></ul><h3><a name="素直でない問題" class="md-header-anchor"></a><span>素直でない問題</span></h3><ul><li><span>明確に答えられない/わからない場合</span></li></ul><p><span>When will your </span><span>~</span><span>~</span><span> begin?</span>
+<span>&gt;</span><span> I haven&#39;t heard yet.</span></p><p><span>あなた(you)に聞かれているので、</span><strong><span>I</span></strong><span> haven&#39;t heardはふさわしい応答</span></p><p><span>Are you going to accept the job offer or do you plan to remain with your current firm?</span>
+<span>&gt;</span><span> I haven&#39;t decided yet.</span></p><h4><a name="質問の正確な応答にならないケース" class="md-header-anchor"></a><span>質問の正確な応答にならないケース</span></h4><ul><li><span>会話スキップ</span></li></ul><p><span>Can I reschedule my appointment?</span>
+<span>&gt;</span><span> (Sure.) When would be good for you?</span></p><p><span>sureを省略。応答が抜けて会話がスピーディーに進む</span></p><ul><li><span>質問の前提をさらに聞き返す</span></li></ul><p><span>How far is it from here to the station?</span>
+<span>&gt;</span><span> Are you thinking about walking? 歩くつもりですか？</span></p><ul><li><span>質問の前提が覆る実情がある場合</span></li></ul><p><span>What time will you pick up </span><span>~</span><span>~</span><span> from the airport?</span>
+<span>&gt;</span><span> Actually, </span><span>~</span><span>~</span><span>(違う誰か) will go to meet him.</span></p><h2><a name="day-2" class="md-header-anchor"></a><span>Day 2</span></h2><ul><li><p><span>I can type the document for you.</span>
+<span>&gt;</span><span> Great. That</span><strong><span>&#39;d help me out</span></strong><span>. 素晴らしい！助かります。</span></p></li><li><p><span>sales meeting 営業会議</span></p></li><li><p><span>invoice 請求書</span></p></li><li><p><strong><span>First thing in</span></strong><span> the morning 朝一番に</span></p><ul><li><span>first thing in the afternoonとかも言うらしい（午後一に）</span></li></ul></li><li><p><span>give </span><span>~</span><span> a call ～に電話する</span></p></li><li><p><span>remain with your current firm 今の会社に残る</span></p></li><li><p><span>accept the job offer 採用の申し出を受ける</span></p></li><li><p><span>sign up for the training 研修に参加登録をする</span></p></li></ul><p><strong><span>質問の主語を聞き逃さない</span></strong></p><h3><a name="review" class="md-header-anchor"></a><span>review</span></h3><ul><li><p><span>patio 中庭</span></p><ul><li><span>would you like a table on the patio or indoors? 中庭の席が良いですか？室内にしますか？</span></li></ul></li><li><p><span>polish </span><strong><span>plant</span></strong><span> ポーランドの</span><strong><span>工場</span></strong></p></li><li><p><strong><span>Are you</span></strong><span> mak</span><strong><span>ing</span></strong><span> a presentation at the conference? 会議でプレゼンされるんですか？</span></p></li><li><p><span>A hevier load than usual いつもより重い荷物</span></p></li><li><p><span>one-time charge 1回の請求(課金) = 1回払い</span></p></li><li><p><strong><span>apply to (体の部位)</span></strong><span> → ～に塗る、つける   </span><del><strong><span>書類とかの話ではない</span></strong></del></p></li><li><p><strong><span>turn in</span></strong><span> my guest badge when I go out 提出する、渡す</span></p></li><li><p><span>I just </span><strong><span>haven&#39;t had a chance to</span></strong><span> </span><span>~</span><span> ～する機会が無かった→</span><strong><span>まだ～できていない</span></strong></p></li><li><p><span>I can&#39;t seem to </span><span>~</span><span> ～できないみたいなんですが</span></p></li></ul><p>&nbsp;</p><p>&nbsp;</p></div>
 </body>
-
 </html>
